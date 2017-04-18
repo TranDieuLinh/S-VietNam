@@ -1,0 +1,32 @@
+<%= form_for(kuchikomi) do |f| %>
+  <% if kuchikomi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kuchikomi.errors.count, "error") %> prohibited this kuchikomi from being saved:</h2>
+
+      <ul>
+      <% kuchikomi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scenery_id %>
+    <%= f.number_field :scenery_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :review_content %>
+    <%= f.text_field :review_content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

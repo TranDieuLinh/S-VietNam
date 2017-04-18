@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @kuchikomi.user_id %>
+</p>
+
+<p>
+  <strong>Scenery:</strong>
+  <%= @kuchikomi.scenery_id %>
+</p>
+
+<p>
+  <strong>Review content:</strong>
+  <%= @kuchikomi.review_content %>
+</p>
+
+<%= link_to 'Edit', edit_kuchikomi_path(@kuchikomi) %> |
+<%= link_to 'Back', kuchikomis_path %>

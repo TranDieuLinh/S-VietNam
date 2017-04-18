@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @image.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @image.title %>
+</p>
+
+<p>
+  <strong>Scenery name:</strong>
+  <%= @image.scenery_name %>
+</p>
+
+<p>
+  <strong>Scenery address:</strong>
+  <%= @image.scenery_address %>
+</p>
+
+<p>
+  <strong>Scenery picture:</strong>
+  <%= image_tag @image.scenery_picture %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @image.description %>
+</p>
+
+<p>
+  <strong>Vote counts:</strong>
+  <%= @image.vote_counts %>
+</p>
+
+<p>
+  <strong>Scenery votepoint:</strong>
+  <%= @image.scenery_votepoint %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

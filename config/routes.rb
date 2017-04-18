@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
+  resources :votes
+  resources :likes
+  resources :kuchikomis
+  resources :meibutus
+  resources :profiles
+  resources :images
   get 'sessions/new'
 
   root 'sessions#new'

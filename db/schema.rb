@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411110116) do
+ActiveRecord::Schema.define(version: 20170417093440) do
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "scenery_name"
+    t.string   "scenery_address"
+    t.string   "scenery_picture"
+    t.string   "description"
+    t.integer  "vote_counts"
+    t.float    "scenery_votepoint"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "kuchikomis", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "scenery_id"
+    t.string   "review_content"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meibutus", force: :cascade do |t|
+    t.integer  "speciatly_id"
+    t.string   "specialty_name"
+    t.string   "specialty_picture"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +60,14 @@ ActiveRecord::Schema.define(version: 20170411110116) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "scenery_id"
+    t.float    "vote_point"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

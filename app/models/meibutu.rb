@@ -1,0 +1,2 @@
+class Meibutu < ApplicationRecord
+end

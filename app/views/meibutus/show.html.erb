@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Speciatly:</strong>
+  <%= @meibutu.speciatly_id %>
+</p>
+
+<p>
+  <strong>Specialty name:</strong>
+  <%= @meibutu.specialty_name %>
+</p>
+
+<p>
+  <strong>Specialty picture:</strong>
+  <%= @meibutu.specialty_picture %>
+</p>
+
+<%= link_to 'Edit', edit_meibutu_path(@meibutu) %> |
+<%= link_to 'Back', meibutus_path %>

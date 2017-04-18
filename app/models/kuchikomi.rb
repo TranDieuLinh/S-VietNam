@@ -1,0 +1,2 @@
+class Kuchikomi < ApplicationRecord
+end

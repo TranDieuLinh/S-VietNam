@@ -1,0 +1,57 @@
+<%= form_for(image, {multipart: true}) do |f| %>
+  <% if image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="field">-->
+  <!--  <%= f.label :user_id %>-->
+  <!--  <%= f.number_field :user_id %>-->
+  <!--</div>-->
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scenery_name %>
+    <%= f.text_field :scenery_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scenery_address %>
+    <%= f.text_field :scenery_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scenery_picture %>
+    <%= f.file_field :scenery_picture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vote_counts %>
+    <%= f.number_field :vote_counts %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scenery_votepoint %>
+    <%= f.text_field :scenery_votepoint %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する"%>
+  </div>
+<% end %>

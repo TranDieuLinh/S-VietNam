@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Meibutus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Speciatly</th>
+      <th>Specialty name</th>
+      <th>Specialty picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meibutus.each do |meibutu| %>
+      <tr>
+        <td><%= meibutu.speciatly_id %></td>
+        <td><%= meibutu.specialty_name %></td>
+        <td><%= meibutu.specialty_picture %></td>
+        <td><%= link_to 'Show', meibutu %></td>
+        <td><%= link_to 'Edit', edit_meibutu_path(meibutu) %></td>
+        <td><%= link_to 'Destroy', meibutu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meibutu', new_meibutu_path %>
